@@ -1,5 +1,9 @@
-# Clicker
+﻿# Welcome to Common Clicker
+The purpose of this project is to use the latest web stack to create the most basic of idle games. If you don't know what an idle games or why do they matter read the following: http://www.ign.com/articles/2013/10/10/inside-cookie-clicker-and-the-idle-game-movement
 
+Want to participate in the project ?? Feel free to grab an issue from the issue page and hack something out. Note we will not accept pulls that don't contain unit tests.
+
+## Some additional info:
 Based on react-redux-universal-hot-example
 
 ## About
@@ -156,3 +160,5 @@ Fear not. [chtefi](https://github.com/chtefi) has figured out [what needs to be 
 #### How do I disable the dev tools?
 
 They will only show in development, but if you want to disable them even there, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.
+
+
