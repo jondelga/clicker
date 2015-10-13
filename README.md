@@ -1,13 +1,6 @@
-# React Redux Universal Hot Example
+# Clicker
 
-[![build status](https://img.shields.io/travis/erikras/react-redux-universal-hot-example/master.svg?style=flat-square)](https://travis-ci.org/erikras/react-redux-universal-hot-example)
-[![react-redux-universal channel on slack](https://img.shields.io/badge/slack-react--redux--universal%40reactiflux-blue.svg)](http://www.reactiflux.com)
-[![Demo on Heroku](https://img.shields.io/badge/demo-heroku-lightgrey.png)](https://react-redux.herokuapp.com)
-[![Dependency Status](https://david-dm.org/erikras/react-redux-universal-hot-example.svg)](https://david-dm.org/erikras/react-redux-universal-hot-example)
-[![devDependency Status](https://david-dm.org/erikras/react-redux-universal-hot-example/dev-status.svg)](https://david-dm.org/erikras/react-redux-universal-hot-example#info=devDependencies)
-[![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellowgreen)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E2LK57ZQ9YRMN)
-
----
+Based on react-redux-universal-hot-example
 
 ## About
 
@@ -54,10 +47,6 @@ npm run dev
 npm run build
 npm run start
 ```
-
-## Demo
-
-A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku).
 
 ## Tutorials
 
@@ -167,8 +156,3 @@ Fear not. [chtefi](https://github.com/chtefi) has figured out [what needs to be 
 #### How do I disable the dev tools?
 
 They will only show in development, but if you want to disable them even there, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.
-
----
-Thanks for checking this out.
-
-– Erik Rasmussen, [@erikras](https://twitter.com/erikras)
