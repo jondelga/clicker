@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+console.log('running karma.');
 
 module.exports = function (config) {
   config.set({

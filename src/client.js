@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom';
 import createHistory from 'history/lib/createBrowserHistory';
 import createStore from './redux/create';
 import ApiClient from './helpers/ApiClient';
-import io from 'socket.io-client';
 import {Provider} from 'react-redux';
 import {reduxReactRouter, ReduxRouter} from 'redux-router';
 
@@ -17,21 +16,6 @@ const client = new ApiClient();
 
 const dest = document.getElementById('content');
 const store = createStore(reduxReactRouter, getRoutes, createHistory, client, window.__data);
-
-function initSocket() {
-  const socket = io('', {path: '/api/ws', transports: ['polling']});
-  socket.on('news', (data) => {
-    console.log(data);
-    socket.emit('my other event', { my: 'data from client' });
-  });
-  socket.on('msg', (data) => {
-    console.log(data);
-  });
-
-  return socket;
-}
-
-global.socket = initSocket();
 
 const component = (
   <Provider store={store} key="provider">

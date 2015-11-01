@@ -6,33 +6,6 @@ Want to participate in the project ?? Feel free to grab an issue from the issue 
 ## Some additional info:
 Based on react-redux-universal-hot-example
 
-## About
-
-This is a starter boiler plate app I've put together using the following technologies:
-
-* ~~Isomorphic~~ [Universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) rendering
-* Both client and server make calls to load data from separate API server
-* [React](https://github.com/facebook/react)
-* [React Router](https://github.com/rackt/react-router)
-* [Express](http://expressjs.com)
-* [Babel](http://babeljs.io) for ES6 and ES7 magic
-* [Webpack](http://webpack.github.io) for bundling
-* [Webpack Dev Middleware](http://webpack.github.io/docs/webpack-dev-middleware.html)
-* [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware)
-* [Redux](https://github.com/rackt/redux)'s futuristic [Flux](https://facebook.github.io/react/blog/2014/05/06/flux.html) implementation
-* [Redux Dev Tools](https://github.com/gaearon/redux-devtools) for next generation DX (developer experience). Watch [Dan Abramov's talk](https://www.youtube.com/watch?v=xsSnOQynTHs).
-* [Redux Router](https://github.com/rackt/redux-router) Keep your router state in your Redux store
-* [ESLint](http://eslint.org) to maintain a consistent code style
-* [redux-form](https://github.com/erikras/redux-form) to manage form state in Redux
-* [lru-memoize](https://github.com/erikras/lru-memoize) to speed up form validation
-* [multireducer](https://github.com/erikras/multireducer) to combine single reducers into one key-based reducer
-* [style-loader](https://github.com/webpack/style-loader), [sass-loader](https://github.com/jtangelder/sass-loader) and [less-loader](https://github.com/webpack/less-loader) to allow import of stylesheets in plain css, sass and less,
-* [react-document-meta](https://github.com/kodyl/react-document-meta) to manage title and meta tag information on both server and client
-* [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools) to allow require() work for statics both on client and server
-* [mocha](https://mochajs.org/) to allow writing unit tests for the project.
-
-I cobbled this together from a wide variety of similar "starter" repositories. As I post this in June 2015, all of these libraries are right at the bleeding edge of web development. They may fall out of fashion as quickly as they have come into it, but I personally believe that this stack is the future of web development and will survive for several years. I'm building my new projects like this, and I recommend that you do, too.
-
 ## Installation
 
 ```
@@ -51,12 +24,6 @@ npm run dev
 npm run build
 npm run start
 ```
-
-## Tutorials
-
-If you are the kind of person that learns best by following along a tutorial, I can recommend the following.
-
-* [React Tutorial - Converting Reflux to Redux](http://engineering.wework.com/process/2015/10/01/react-reflux-to-redux/), by Matt Star
 
 ## Explanation
 
@@ -91,11 +58,6 @@ The middleware, [`clientMiddleware.js`](https://github.com/erikras/react-redux-u
 1. To allow the action creators access to the client API facade. Remember this is the same on both the client and the server, and cannot simply be `import`ed because it holds the cookie needed to maintain session on server-to-server requests.
 2. To allow some actions to pass a "promise generator", a function that takes the API client and returns a promise. Such actions require three action types, the `REQUEST` action that initiates the data loading, and a `SUCCESS` and `FAILURE` action that will be fired depending on the result of the promise. There are other ways to accomplish this, some discussed [here](https://github.com/gaearon/redux/issues/99), which you may prefer, but to the author of this example, the middleware way feels cleanest.
 
-#### Redux Modules... *What the Duck*?
-
-The `src/redux/modules` folder contains "modules" to help
-isolate concerns within a Redux application (aka [Ducks](https://github.com/erikras/ducks-modular-redux), a Redux Style Proposal that I came up with). I encourage you to read the
-[Ducks Docs](https://github.com/erikras/ducks-modular-redux) and provide feedback.
 
 #### API Server
 
@@ -135,27 +97,6 @@ To run the tests in the project, just simply run `npm test` if you have `Chrome`
 
 To keep watching your test suites that you are working on, just set `singleRun: false` in the `karma.conf.js` file. Please be sure set it to `true` if you are running `npm test` on a continuous integration server (travis-ci, etc).
 
-## Heroku Deploy
-
-To get this project to work on Heroku, you need to:
-
-1. Remove the `"PORT": 8080` line from the `betterScripts` / `start-prod` section of `package.json`.
-2. `heroku config:set NODE_ENV=production`
-3. `heroku config:set NODE_PATH=./src`
-4. `heroku config:set NPM_CONFIG_PRODUCTION=false`
-  * This is to enable webpack to run the build on deploy.
-
-The first deploy might take a while, but after that your `node_modules` dir should be cached.
-
-## The Future
-
-* [Inline Styles](docs/InlineStyles.md) - CSS is dead.
-
-## FAQ
-
-#### Help! It doesn't work on Windows! What do I do?
-
-Fear not. [chtefi](https://github.com/chtefi) has figured out [what needs to be changed](https://github.com/erikras/react-redux-universal-hot-example/pull/21/files) to make it work on Windows 8.
 
 #### How do I disable the dev tools?
 
